@@ -1,3 +1,10 @@
+/**
+ * Name: Dev Kumar
+ * Section: AI-2A
+ * Date: 1/25/2025
+ * Desc: Program to find factorial of given number
+ */
+
 #include <iostream>
 using namespace std;
 
