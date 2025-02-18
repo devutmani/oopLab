@@ -4,7 +4,8 @@
 #include <iostream>
 using namespace std;
 
-class Employee {
+class Employee 
+{
 private:
     string employeeName;
     double employeeSalary;
