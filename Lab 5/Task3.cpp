@@ -74,6 +74,37 @@ public:
     }
 };
 
+class Payment
+{
+private:
+    double amount;
+
+public:
+    Payment() : amount(0) {}
+
+    void calculateBill(Menu* menu, int* itemReferences, int* itemQuantities, int purchaseCount)
+    {
+        amount = 0;
+        cout << "\n--- Bill Details ---" << endl;
+        for (int i = 0; i < purchaseCount; i++)
+        {
+            int itemIndex = itemReferences[i] - 1;
+            MenuItems* item = menu->getItem(itemIndex);
+            if (item)
+            {
+                double itemTotalPrice = item->getPrice() * itemQuantities[i];
+                cout << i + 1 << ". " << item->getName() << "  Quantity: " << itemQuantities[i] << "  Price: " << itemTotalPrice << endl;
+                amount += itemTotalPrice;
+            }
+            else
+            {
+                cout << "Invalid item reference: " << itemReferences[i] << endl;
+            }
+        }
+        cout << "\nTotal Amount: " << amount << endl;
+    }
+};
+
 class Order
 {
 private:
@@ -130,37 +161,6 @@ public:
 
         Payment payment;
         payment.calculateBill(m, itemReferences, itemQuantities, purchaseCount);
-    }
-};
-
-class Payment
-{
-private:
-    double amount;
-
-public:
-    Payment() : amount(0) {}
-
-    void calculateBill(Menu* menu, int* itemReferences, int* itemQuantities, int purchaseCount)
-    {
-        amount = 0;
-        cout << "\n--- Bill Details ---" << endl;
-        for (int i = 0; i < purchaseCount; i++)
-        {
-            int itemIndex = itemReferences[i] - 1;
-            MenuItems* item = menu->getItem(itemIndex);
-            if (item)
-            {
-                double itemTotalPrice = item->getPrice() * itemQuantities[i];
-                cout << i + 1 << ". " << item->getName() << "  Quantity: " << itemQuantities[i] << "  Price: " << itemTotalPrice << endl;
-                amount += itemTotalPrice;
-            }
-            else
-            {
-                cout << "Invalid item reference: " << itemReferences[i] << endl;
-            }
-        }
-        cout << "\nTotal Amount: " << amount << endl;
     }
 };
 
