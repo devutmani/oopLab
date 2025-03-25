@@ -12,6 +12,7 @@ bool isPrime(int num);      // prototype  of prime number checking function
 
 int main()
 {
+    cout << "Welcome!" << endl;
     // declaring variable for number
     int num;
 
@@ -34,6 +35,7 @@ int main()
     }
 
     // if above condition is not true then this line will exicute
+    cout<<num<<" is not a prime number!"<<endl;
     cout<<num<<" is not a prime number!"<<endl;
 }
 
