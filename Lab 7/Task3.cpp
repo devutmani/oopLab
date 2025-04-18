@@ -80,8 +80,8 @@ public:
 int main()
 {
     Dollar temp1(2342, "USD", "$", 3.2);
-    Euro temp2(985678, "INR", "$", 3.2);
-    Rupee temp3(85732, "Rs", "$", 3.2);
+    Euro temp2(985678, "EUR", "€", 3.2);
+    Rupee temp3(85732, "INR", "₹", 3.2);
 
     temp1.convertToBase();
     temp2.convertToBase();
