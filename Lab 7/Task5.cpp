@@ -20,9 +20,15 @@ public:
         cout<<"Publisher: "<<publisher<<endl;
     }
 
-    virtual void checkOut() const {}
+    virtual void checkOut() const 
+    {
+        cout<<"\nItem of ID "<<uniqueID<<" is checked out!..."<<endl;
+    }
 
-    virtual void returnItem() const {}
+    virtual void returnItem() const 
+    {
+        cout<<"\nItem of ID "<<uniqueID<<" is returned!..."<<endl;
+    }
 };
 
 class Book : public Media
@@ -95,17 +101,17 @@ public:
     void displayInfo() const
     {
         Media::displayInfo();
-        cout<<"Name: "<<name<<end;
+        cout<<"Name: "<<name<<endl;
         cout<<"Magazine No: "<<magazineNo<<endl;
     }
 };
 
 int main()
 {
-    Book b;
-    DVD d;
-    CD c;
-    Magazine m;
+    // Book b;
+    // DVD d;
+    // CD c;
+    // Magazine m;
 
     return 0;
 }

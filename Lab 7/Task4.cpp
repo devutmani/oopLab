@@ -13,7 +13,12 @@ protected:
 public:
     Person(const string &name, const string &id, const string &address, const string &phoneNumber, const string &email) : name(name), id(id), address(address), phoneNumber(phoneNumber), email(email) {}
 
-    void updateInfo() const {}
+    void updateInfo(const string &address, const string &phoneNumber, const string &email)
+    {
+        this->address = address;
+        this->phoneNumber = phoneNumber;
+        this->email = email;
+    }
 
     virtual void displayInfo() const
     {
