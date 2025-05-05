@@ -1,0 +1,3 @@
+Total characters: 118
+Total words: 20
+Total lines: 2
